@@ -1,0 +1,54 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+        url("../fonts/#{$file_name}.woff") format("woff");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+// utils
+@import './utils/_variables.scss';
+@import './utils/_mixins.scss';
+
+// base
+// @import './base/fonts';
+// @import './base/_icons';
+// @import './base/_reset';
+// @import './base/_base';
+// layouts
+// @import './layouts/_header';
+@import './layouts/_footer';
+
+
+// sections
+@import './sections/_section1';
+@import './sections/_section2';
+@import './sections/_section3';
+@import './sections/_section4';
+@import './sections/_section5';
+@import './sections/_section6';
+
+// pages
+
+
+// wpbakery
+
+
+// components
+@import './components/_button';
+@import './components/_canvas';
+
+
+// themes
+
+
+// vendors
+
+
+// plugins
+
+

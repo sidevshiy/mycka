@@ -1,0 +1,39 @@
+.btn {
+	display: flex;
+	button {
+		padding: 9px;
+		background: #C40B0B;
+		color: #fff;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 24px;
+		letter-spacing: 0.15px;
+		text-transform: uppercase;
+		outline: none;
+		cursor: pointer;
+	}
+	
+	div.div-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #E30B0B;
+		position: relative;
+		cursor: pointer;
+		&::after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height:100%;
+			width: 17px;
+			background: linear-gradient(to bottom right, #C40B0B 50%, #E30B0B 50%);
+		}
+	}
+	i {
+		color: #fff;
+		margin-left: 19px;
+		margin-right: 11px;
+	}
+}

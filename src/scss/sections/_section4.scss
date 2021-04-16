@@ -1,0 +1,158 @@
+.section4 {
+}
+.appoint {
+	background-color: #02133C;
+	padding-top: 130px;
+	padding-bottom: 210px;
+	overflow: hidden;
+	.container {
+		display: flex;
+		z-index: 10;
+	}
+		&__img {
+			position: absolute;
+		}
+
+		&__img-top {
+			top: 0;
+			right: 0;
+		}
+
+		&__img-bottom {
+			bottom: 0;
+			left: 0;
+			transform: rotateX(180deg);
+		}
+
+		&__form {
+			background-color: #fff;
+			flex: 0.5;
+			@media (max-width: 946px) {
+				flex: 1;
+			}
+			@include animFromLeft(0.4s);
+		}
+
+		&__max {
+			flex: 0.5;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			h4, h6 {
+				color: #fff;
+			}
+			@media (max-width: 946px) {
+				display: none;
+			}
+			@include animFromRight(0.4s);
+		}
+
+		&__number {
+			margin: 53px 0;
+			font-weight: 900;
+			font-size: 96px;
+			line-height: 56px;
+			color: #C40B0B;
+		}
+
+}
+.container {
+}
+.form {
+	padding: 76px 58px;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(51,51,51,0.9) url(../img/loading.gif) center / 50px no-repeat;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s ease;
+	}
+
+	&._sending::after {
+		opacity: 1;
+		visibility: visible;
+	}
+
+		input::placeholder,
+		textarea::placeholder {
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 0.15px;
+			color: #959595;
+		}
+		&__title {
+			text-align: center;
+			margin-bottom: 43px;
+			h3 {
+				color: #02133C;
+			}
+		}
+
+		&__group {
+			display: flex;
+			justify-content: space-between;
+			input {
+				padding: 17px 24px;
+				background: #F5F5F5;
+				width: 47.5%;
+				@media (max-width: 620px) {
+					width: 100%;
+					margin-top: 20px;
+				}
+				&._error {
+					box-shadow: 0 0 15px red;
+				}
+			}
+
+			& + & {
+				margin-top: 22px;
+				@media (max-width: 620px) {
+					margin-top: 0;
+				}
+			}
+
+			@media (max-width: 620px) {
+				flex-direction: column;
+			}
+		}
+
+		&__btn {
+			justify-content: flex-end;
+			@media (max-width: 620px) {
+				justify-content: center;
+			}
+		}
+
+		textarea {
+			margin-top: 22px;
+			margin-bottom: 30px;
+			padding: 17px 24px;
+			width: 100%;
+			background: #F5F5F5;
+			min-height: 180px;
+			resize: none;
+			&._error {
+				box-shadow: 0 0 15px red;
+			}
+		}
+
+		@media (max-width: 620px) {
+			padding: 56px 15px;
+		}
+
+}
+.btn {
+}
+.div-icon {
+}
+.icon-right {
+}
